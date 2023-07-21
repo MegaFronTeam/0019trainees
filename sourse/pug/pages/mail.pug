@@ -18,22 +18,30 @@ html(lang="ru")
 	body(class=mainPage data-bg=bg)
 		.main-wrapper
 			+b.modal-win
-				+e.title Поздравляем!
+				+e.title 
+					table
+						tr
+							td.left
+								img(src="https://megafronteam.github.io/0019trainees/public/img/left.png", alt="").left
+							td
+								| Поздравляем!
+							td.right
+								img(src="https://megafronteam.github.io/0019trainees/public/img/right.png", alt="").right
 				+e.title-sub Ты&nbsp;сделал первый шаг к&nbsp;карьере в&nbsp;Правительстве Москвы. Мы&nbsp;свяжемся с&nbsp;тобой по&nbsp;указанному электронному адресу и&nbsp;расскажем о&nbsp;дальнейших действиях.
 				p Узнай больше о&nbsp;карьере в&nbsp;Правительстве Москвы!
 				.d-inline-block
 					.text-left
-						img(src="img/b-left.png", alt="")
+						img(src="https://megafronteam.github.io/0019trainees/public/img/b-left.png", alt="")
 					.row
 						mixin item(i, t)
 							+e.item(href="#")
 								+e.qr-wrap
-									+img(`img/qr-${i}.png`)
+									+img(`https://megafronteam.github.io/0019trainees/public/img/qr-${i}.png`)
 									+e.item-title= t
 						+item(`1`,`Сайт`)
 						+item(`2`,`ВКонтакте`)
 						+item(`3`,`Телеграм`)
 					.text-right
-						img(src="img/b-right.png", alt="")
+						img(src="https://megafronteam.github.io/0019trainees/public/img/b-right.png", alt="")
 		//- +allcjs()
 		block scripts
