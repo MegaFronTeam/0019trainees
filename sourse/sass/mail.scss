@@ -1,0 +1,127 @@
+$output-bourbon-deprecation-warnings: false;
+  // @use "sass:list";
+  // @use "sass:map";
+  @use "sass:math";
+  // @use "sass:meta";
+
+// @import "mq";
+@import "bourbon/app/assets/stylesheets/bourbon";
+// @import "../../node_modules/rfs/scss";
+// @import "./node_modules/@fancyapps/ui/src/Fancybox/Fancybox.scss";
+// @import "./node_modules/swiper/swiper.scss";
+
+@import "mixin";
+@import "fonts";
+@import "_sprite";
+@import "_spriteC";
+// @import "bootstrap-theme/bootstrap";
+
+// Option B: Include parts of Bootstrap
+
+
+// v5
+
+// Layout & components
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "vars"; 
+@import "./node_modules/bootstrap/scss/variables";
+@import "var-dark";
+@import "./node_modules/bootstrap/scss/variables-dark";
+@import "./node_modules/bootstrap/scss/maps";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
+
+// Layout & components
+// @import "./node_modules/bootstrap/scss/root";
+@import "./node_modules/bootstrap/scss/reboot";
+@import "root"; 
+
+@import "media"; // Всегда в конце
+
+
+
+body{
+  background: var(--primary-pressed, #EEEAF2);
+}
+
+
+body{
+  font-family:  system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.modal-win {
+	// display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 96px 1rem;
+	max-width: 100%;
+	position: relative;
+	width: rem(727);  
+	// min-height: 100%; 
+	 
+	position: relative;
+	z-index: 2;
+  text-align: center; 
+	&__title{
+		font-size: 36px; 
+		font-weight: bold;
+		margin-bottom: rem(10);
+		color: $primary; 
+	}
+	@include media-breakpoint-up(sm) {
+
+		&__icon{
+			display: none;
+		}
+	}
+	p{
+		@include media-breakpoint-up(sm) {
+
+			@include rfs(24px);
+		}
+		@include media-breakpoint-down(sm) {
+			max-width: 300px;
+		}
+	}
+	&__title-sub{
+		color: $primary;
+		font-size: 24px;
+		margin-bottom: rem(20);
+	}
+  
+	.row{
+			text-align: center;
+      padding-left: 20px;
+      padding-right: 20px; 
+	}
+	&__item{
+		color: $body-color;
+    display: inline-block;
+    margin-left: 8px;
+    background-color: #fff;
+    margin-right: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    img{
+      margin-bottom: 4px;
+    }
+	}
+  &__item-title{
+    color: #fff;
+    background-color: $primary;
+    width: 100%;
+    padding: 4px;
+    width: 114px;
+    border-radius: 5px;
+  }
+}
+
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.d-inline-block{
+  display: inline-block;
+}
