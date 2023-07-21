@@ -1,0 +1,17 @@
+extends ../layout/main.pug
+include ../blocks/sForm/_sForm.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sForm()

@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+include ../blocks/sForm/_sForm.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= '1.2'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sForm()
+			div(class="form-wrap__input-wrap form-group")
+				select(class="form-wrap__input form-select сustom-select-js")
+					option(disabled) Выбрать
+					option( selected) Школьник
+					option() Учащийся/выпускник колледжа
+					option() Студент 1–3-го курса вуза
+					option() Студент последнего курса бакалавриата/специалитета
+					option() Магистрант
+					option() Выпускник вуза
+			+e.group
+				p.mb-0 Я&nbsp;хочу принять участие в&nbsp;Молодежных карьерных проектах 
+					span.d-block.text-secondary для школьников 10&ndash;11-х классов.

@@ -1,0 +1,24 @@
+
+mixin modal() 
+	//  start modals
+	div(id="modal"  style="display: none" )
+		+b.modal-win
+			+e.title Поздравляем!
+			+e.title-sub Ты&nbsp;сделал первый шаг к&nbsp;карьере в&nbsp;Правительстве Москвы. Мы&nbsp;свяжемся с&nbsp;тобой по&nbsp;указанному электронному адресу и&nbsp;расскажем о&nbsp;дальнейших действиях.
+			p Узнай больше о&nbsp;карьере в&nbsp;Правительстве Москвы!
+			.row
+				mixin item(i, t)
+					+e.item(href="#")
+						+e.qr-wrap
+							+e.item-title= t
+							+img(`img/qr-${i}.png`)
+						+e.icon
+							+img(`img/svg/icon-${i}.svg`)
+						
+				+item(`1`,`Сайт`)
+				+item(`2`,`ВКонтакте`)
+				+item(`3`,`Телеграм`)
+
+	// #modal-call
+	
+	// end modals
