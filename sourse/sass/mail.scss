@@ -45,7 +45,9 @@ body{
   background: var(--primary-pressed, #EEEAF2);
 }
 
-
+table{
+  width: 100%;
+}
 body{
   font-family:  system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
@@ -56,7 +58,7 @@ body{
   padding: 96px 1rem;
 	max-width: 100%;
 	position: relative;
-	width: rem(727);  
+	width: rem(827);  
 	// min-height: 100%; 
 	 
 	position: relative;
@@ -67,6 +69,12 @@ body{
 		font-weight: bold;
 		margin-bottom: rem(10);
 		color: $primary; 
+    .left{
+     text-align: left;
+    }
+    .right{
+      float: right;
+    }
 	}
 	@include media-breakpoint-up(sm) {
 
