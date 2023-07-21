@@ -4,7 +4,8 @@ function eventHandler() {
 	JSCCommon.init() 
 
 	$(".сustom-select-js").select2({
-		tags: true
+		tags: true,
+		dropdownParent: $(".сustom-select-js").parent(),
 	});
 
 };
