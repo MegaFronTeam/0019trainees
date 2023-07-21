@@ -11,9 +11,9 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/swiper/swiper.scss";
 
 @import "mixin";
-@import "fonts";
-@import "_sprite";
-@import "_spriteC";
+// @import "fonts";
+// @import "_sprite";
+// @import "_spriteC";
 // @import "bootstrap-theme/bootstrap";
 
 // Option B: Include parts of Bootstrap
@@ -22,7 +22,7 @@ $output-bourbon-deprecation-warnings: false;
 // v5
 
 // Layout & components
-
+$default-font: "GT Walsheim Pro";
 @import "./node_modules/bootstrap/scss/functions";
 @import "vars"; 
 @import "./node_modules/bootstrap/scss/variables";
@@ -37,7 +37,7 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/reboot";
 @import "root"; 
 
-@import "media"; // Всегда в конце
+// @import "media"; // Всегда в конце
 
 
 
@@ -96,11 +96,7 @@ body{
 	}
 	p{
 		@include media-breakpoint-up(sm) {
-
 			@include rfs(24px);
-		}
-		@include media-breakpoint-down(sm) {
-			max-width: 300px;
 		}
 	}
 	&__title-sub{

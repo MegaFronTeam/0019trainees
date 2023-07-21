@@ -262,3 +262,11 @@ a {
 
 	}
 }
+
+.fancybox__content>.f-button.is-close-btn{
+	top: 36px !important;
+	right: 20px !important;
+	opacity: 1;
+	color: $body-color;
+	background: none;
+}

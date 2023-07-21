@@ -3,25 +3,32 @@ mixin sForm()
 	+b.sForm.section#sForm&attributes(attributes)
 			+form-wrap
 				+input("ФИО*",'text').is-valid
-				+input("Дата рождения*",'date').is-invalid
-					.invalid-feedback неверный формат адреса почты
+				.d-none.d-sm-block
+					+input("Дата рождения*",'text').is-invalid.date-mask-js
+						.invalid-feedback неверный формат адреса почты
+				.d-sm-none
+					+input("Дата рождения*",'date').is-invalid
+						.invalid-feedback неверный формат адреса почты
 				+input("Телефон*",'tel') 
 				
-				+in-c("checkbox", 'Гражданство РФ')
+				//- +in-c("checkbox", 'Гражданство РФ')
+
+				+in-c("radio",'Гражданство РФ','gr')
+				+in-c("radio",'Гражданство другого Государства','gr')
 				+input("E-mail*",'email')
 				if block
 					block
 				else
 					div(class="form-wrap__input-wrap form-group")
-						select(class="form-wrap__input form-select сustom-select-js")
-							option(disabled selected) Выбрать
-							option() Школьник
-							option() Учащийся/выпускник колледжа
-							option() Студент 1–3-го курса вуза
-							option() Студент последнего курса бакалавриата/специалитета
-							option() Магистрант
-							option() Выпускник вуза
+						select(class="form-wrap__input form-select сustom-select-js" data-placeholder="Уровень образования*") 
+							option()  
+							option(value="Школьник") Школьник
+							option(value="Учащийся/выпускник колледжа") Учащийся/выпускник колледжа
+							option(value="Студент 1–3-го курса вуза") Студент 1–3-го курса вуза
+							option(value="Студент последнего курса бакалавриата/специалитета") Студент последнего курса бакалавриата/специалитета
+							option(value="Магистрант") Магистрант
+							option(value="Выпускник вуза") Выпускник вуза
 						div(class="form-wrap__input-title") Уровень образования*
-				+e.btn.btn.btn-dark(type="submit").w-100 Подать заявку
+				+e.btn.btn.btn-dark(type="submit").w-100 Отправить заявку
 				+policy
 	// end sForm

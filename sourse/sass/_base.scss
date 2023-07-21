@@ -597,3 +597,26 @@ iframe {
 .mb-0{
 	margin-bottom: 0;
 }
+
+
+
+.form-control.is-valid, .was-validated .form-control:valid {
+ 
+	background-position: right center;
+}
+
+@include media-breakpoint-up(sm) {
+	.d-sm-none{
+		display: none;
+	}
+}
+.d-sm-block{
+	@include media-breakpoint-up(sm) {
+
+		display: block;
+	}
+}
+
+.mb-1{
+	margin-bottom: 5px;
+}

@@ -37,18 +37,30 @@
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
-							<div class="form-wrap__input-wrap form-group"> 
-								<label><input class="form-wrap__input form-control is-invalid" name="date" type="date"/><span class="form-wrap__input-title">Дата рождения*</span>
-									<div class="invalid-feedback">неверный формат адреса почты</div>
-								</label>
+							<div class="d-none d-sm-block">
+								<div class="form-wrap__input-wrap form-group"> 
+									<label><input class="form-wrap__input form-control is-invalid date-mask-js" name="text" type="text" placeholder="Дата рождения*"/><span class="form-wrap__input-title">Дата рождения*</span>
+										<div class="invalid-feedback">неверный формат адреса почты</div>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
 							</div>
-							<!-- +e.input-wrap-->
+							<div class="d-sm-none">
+								<div class="form-wrap__input-wrap form-group"> 
+									<label><input class="form-wrap__input form-control is-invalid" name="date" type="date"/><span class="form-wrap__input-title">Дата рождения*</span>
+										<div class="invalid-feedback">неверный формат адреса почты</div>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
 							<div class="form-wrap__input-wrap form-group"> 
 								<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон*"/><span class="form-wrap__input-title">Телефон*</span> 
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Гражданство РФ</span>
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio"/><span class="custom-input__text form-check-label">Гражданство РФ</span>
+							</label>
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio"/><span class="custom-input__text form-check-label">Гражданство другого Государства</span>
 							</label>
 							<div class="form-wrap__input-wrap form-group"> 
 								<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail*"/><span class="form-wrap__input-title">E-mail*</span>
@@ -56,21 +68,21 @@
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group">
-								<select class="form-wrap__input form-select сustom-select-js">
-									<option disabled>Выбрать</option>
-									<option>Школьник</option>
-									<option selected>Учащийся/выпускник колледжа</option>
-									<option>Студент 1–3-го курса вуза</option>
-									<option>Студент последнего курса бакалавриата/специалитета</option>
-									<option>Магистрант</option>
-									<option>Выпускник вуза</option>
+								<select class="form-wrap__input form-select сustom-select-js" data-placeholder="Уровень образования*">
+									<option> </option>
+									<option value="Школьник ">Школьник</option>
+									<option value="Учащийся/выпускник колледжа " selected>Учащийся/выпускник колледжа</option>
+									<option value="Студент 1–3-го курса вуза ">Студент 1–3-го курса вуза</option>
+									<option value="Студент последнего курса бакалавриата/специалитета ">Студент последнего курса бакалавриата/специалитета</option>
+									<option value="Магистрант ">Магистрант</option>
+									<option value="Выпускник вуза ">Выпускник вуза</option>
 								</select>
 								<div class="form-wrap__input-title">Уровень образования*</div>
 							</div>
 							<div class="form-wrap__group">
 								<p class="mb-0">Я&nbsp;хочу пройти практику.<span class="d-block text-secondary">До&nbsp;месяца работы с&nbsp;целью получения профильного опыта работы для студентов 1&ndash;4-х курсов столичных вузов и&nbsp;магистрантов.</span></p>
 							</div>
-							<button class="form-wrap__btn btn btn-dark w-100" type="submit">Подать заявку
+							<button class="form-wrap__btn btn btn-dark w-100" type="submit">Отправить заявку
 							</button>
 							<div class="form-wrap__policy">Нажимая кнопку &laquo;Отправить заявку&raquo;, я&nbsp;<a href="#" >принимаю условия политики обработки персональных данных</a>.
 							</div>

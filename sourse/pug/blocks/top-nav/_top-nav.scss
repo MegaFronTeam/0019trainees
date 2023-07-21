@@ -11,7 +11,7 @@
 		max-width: calc(1600px - 94px * 2);
 		
 		img{
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(xl) {
 				position: absolute;
 				left: 15px;
 				top: rem(10);

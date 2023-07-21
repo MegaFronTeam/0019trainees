@@ -16,14 +16,14 @@ block pagecontent
 	main
 		+sForm()
 			div(class="form-wrap__input-wrap form-group")
-				select(class="form-wrap__input form-select сustom-select-js")
-					option(disabled) Выбрать
-					option( ) Школьник
-					option(selected) Учащийся/выпускник колледжа
-					option() Студент 1–3-го курса вуза
-					option() Студент последнего курса бакалавриата/специалитета
-					option() Магистрант
-					option() Выпускник вуза
+				select(class="form-wrap__input form-select сustom-select-js"  data-placeholder="Уровень образования*")
+					option( )  
+					option(value="Школьник "  ) Школьник
+					option(value="Учащийся/выпускник колледжа " selected) Учащийся/выпускник колледжа
+					option(value="Студент 1–3-го курса вуза " ) Студент 1–3-го курса вуза
+					option(value="Студент последнего курса бакалавриата/специалитета " ) Студент последнего курса бакалавриата/специалитета
+					option(value="Магистрант " ) Магистрант
+					option(value="Выпускник вуза " ) Выпускник вуза
 				div(class="form-wrap__input-title") Уровень образования*
 			+e.group
 				p.mb-0 Я&nbsp;хочу пройти практику.
