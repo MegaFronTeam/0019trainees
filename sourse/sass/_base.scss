@@ -481,7 +481,7 @@ iframe {
 	/* ===== Scrollbar CSS ===== */
 	/* Firefox */
 	// --bs-primary: #dedede;
-
+@media (hover: hover) {
 	& {
 		scrollbar-width: auto;
 		scrollbar-color: #dedede transparent;
@@ -502,6 +502,7 @@ iframe {
 		border: 0px solid transparent;
 		border-radius: 2px;
 	}
+}
 }
 
 ::-webkit-calendar-picker-indicator {
