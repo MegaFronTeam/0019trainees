@@ -32,3 +32,33 @@ mixin sForm()
 				+e.btn.btn.btn-dark(type="submit").w-100 Отправить заявку
 				+policy
 	// end sForm
+
+mixin sForm2()
+	// start sForm
+	+b.sForm.section#sForm2&attributes(attributes)
+			+form-wrap
+				+e.title Заполни заявку<br>и пройди конкурсный отбор
+				+e.item
+					+input("Название вуза, в котором учишься*",'text')
+				+e.item
+					p Знаешь ли ты точные даты своей практики*?
+					+in-c("radio",'Да','period')(checked)
+					+in-c("radio",'Нет','period')
+				+e.item
+					p Даты прохождения практики:
+					+e.SMALL.text.text-secondary.small Подай заявку не позднее чем за месяц до начала практики
+				+e.item
+					+input("E-mail*",'email')
+					+e.SMALL.text.text-secondary.small Пожалуйста, не используй Gmail, чтобы точно получать наши письма
+				+input("Телефон*",'tel')
+				+input("ФИО*",'text').is-valid
+				+input("Дата рождения*",'text').is-invalid.date-mask-js
+					.invalid-feedback неверный формат даты
+				//- +in-c("checkbox", 'Гражданство РФ')
+
+				+e.item
+					+in-c("radio",'Гражданство РФ','gr')(checked)
+					+in-c("radio",'Гражданство другого государства','gr')
+				+e.btn.btn.btn-dark(type="submit").w-100 Отправить заявку
+				+policy2
+	// end sForm

@@ -1,0 +1,39 @@
+extends ../layout/main.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sReg/_sReg.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Регистрация'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	//- +parts('header')
+	
+	main
+		h1 Приходи на практику в Правительство Москвы!
+		+sForm2()
+			div(class="form-wrap__input-wrap form-group")
+				select(class="form-wrap__input form-select сustom-select-js"  data-placeholder="Уровень образования*")
+					option(disabled) Уровень образования*
+					option(value="Школьник "  ) Школьник
+					option(value="Учащийся/выпускник колледжа " ) Учащийся/выпускник колледжа
+					option(value="Студент 1–3-го курса вуза " ) Студент 1–3-го курса вуза
+					option(value="Студент последнего курса бакалавриата/специалитета " selected) Студент последнего курса бакалавриата/специалитета
+					option(value="Магистрант " ) Магистрант
+					option(value="Выпускник вуза " ) Выпускник вуза
+				div(class="form-wrap__input-title") Уровень образования*
+			+e.group
+				p.mb-1 Я хочу:
+				+in-c("radio",'','radio')
+					+e.SPAN.text.form-check-label стажироваться в&nbsp;Правительстве Москвы.
+						span.d-block.text-secondary Оплачиваемые стажировки для студентов последних курсов бакалавриата, магистрантов и&nbsp;выпускников вузов до&nbsp;35&nbsp;лет.
+				+in-c("radio",'','radio')
+					+e.SPAN.text.form-check-label пройти практику.
+						span.d-block.text-secondary До&nbsp;месяца работы с&nbsp;целью получения профильного опыта работы для студентов 1&ndash;4-х курсов столичных вузов и&nbsp;магистрантов.
+		+sReg()

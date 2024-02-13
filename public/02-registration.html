@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Регистрация</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+							wrap.remove();
+						}
+					);
+			}
+		</script>
+	</head>
+	<body class="main-page custom-scroll">
+		<div class="main-wrapper">
+			<main>
+				<h1>Приходи на практику в Правительство Москвы!</h1>
+				<!-- start sForm-->
+				<div class="sForm section" id="sForm2">
+					<div class="form-wrap">
+						<form>
+							<div class="form-wrap__title">Заполни заявку<br>и пройди конкурсный отбор
+							</div>
+							<div class="form-wrap__item">
+								<div class="form-wrap__input-wrap form-group"> 
+									<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Название вуза, в котором учишься*"/><span class="form-wrap__input-title">Название вуза, в котором учишься*</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="form-wrap__item">
+								<p>Знаешь ли ты точные даты своей практики*?</p>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Да</span>
+								</label>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+								</label>
+							</div>
+							<div class="form-wrap__item">
+								<p>Даты прохождения практики:</p><small class="form-wrap__text text-secondary small">Подай заявку не позднее чем за месяц до начала практики</small>
+							</div>
+							<div class="form-wrap__item">
+								<div class="form-wrap__input-wrap form-group"> 
+									<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail*"/><span class="form-wrap__input-title">E-mail*</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap--><small class="form-wrap__text text-secondary small">Пожалуйста, не используй Gmail, чтобы точно получать наши письма</small>
+							</div>
+							<div class="form-wrap__input-wrap form-group"> 
+								<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон*"/><span class="form-wrap__input-title">Телефон*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"> 
+								<label><input class="form-wrap__input form-control is-valid" name="text" type="text" placeholder="ФИО*"/><span class="form-wrap__input-title">ФИО*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__input-wrap form-group"> 
+								<label><input class="form-wrap__input form-control is-invalid date-mask-js" name="text" type="text" placeholder="Дата рождения*"/><span class="form-wrap__input-title">Дата рождения*</span>
+									<div class="invalid-feedback">неверный формат даты</div>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+							<div class="form-wrap__item">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Гражданство РФ</span>
+								</label>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio"/><span class="custom-input__text form-check-label">Гражданство другого государства</span>
+								</label>
+							</div>
+							<button class="form-wrap__btn btn btn-dark w-100" type="submit">Отправить заявку
+							</button>
+							<div class="form-wrap__policy">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text text-secondary">Я соглашаюсь на обработку моих <a href="https://talent.mos.ru/upload/agreement/agreement_10_08_2023.pdf">персональных данных</a>.</span>
+								</label>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- end sForm-->
+				<!-- start sReg-->
+				<div class="sReg section" id="sReg">
+					<div class="section-title">Ответы на частые <span>вопросы</span></div>
+					<div class="dd-group dd-group-js">
+						<div class="dd-group__item active">
+							<div class="dd-group__head dd-head-js">Кто может участвовать в проекте?
+							</div>
+							<div class="dd-group__content dd-content-js active">
+								<p>Студенты бакалавриата, специалитета и магистратуры вузов Москвы и Московской области старше 18 лет. Студентам старших курсов мы также рекомендуем ознакомиться с нашей <a href="https://talent.mos.ru/internships/?utm_source=internal&utm_medium=registration_form&utm_content=practice">программой стажировок</a>.</p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">Как долго длится практика?
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p>Практика длится от двух недель до двух месяцев, а проходить ее ты можешь неограниченное количество раз. Например, приобретая опыт работы на каждом курсе, к концу обучения ты соберешь профессиональное резюме.</p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">Оплачивается ли практика?
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p>Нет, практика не оплачивается, но ты получишь по-настоящему ценный опыт. Благодаря проекту ты сразу начнешь работать над реальными городскими задачами, окунешься в специфику Правительства Москвы и сможешь лучше подготовиться к стажировке.</p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">Могу ли я засчитать практику у вас в качестве практики от вуза? 
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p>Да. Для этого необходимо заранее подготовить форму договора о практической подготовке своего вуза. Запроси ее в центре карьеры своего учебного заведения, факультета или кафедры. Мы возьмем ее у тебя для согласования практики в организации, которую ты выберешь.</p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">Что необходимо сделать, чтобы попасть на практику?
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p></p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">У меня нет опыта работы. Что я могу указать в резюме?
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p></p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">Могу ли я выбрать место практики?
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p>Да, после того как ты примешь приглашение, попадешь в закрытый Telegram-канал. В нем мы выкладываем организации и подразделения для твоей будущей практики. Ты сможешь посмотреть, выбрать и откликнуться во все места, которые тебе понравятся.</p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">Сколько часов необходимо работать в месте проведения практики?
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p>От 20 до 40 часов в неделю. При 20-часовой рабочей неделе ты сможешь учесть свою учебную занятость и согласовать индивидуальный график с наставником. Важно помнить: практиканты работают согласно производственному календарю. Суббота, воскресенье и государственные праздники — выходные.</p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">Получу ли я какой-нибудь документ о прохождении практики?
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p>Да, в конце практики ты получишь сертификат. А по желанию можешь запросить рекомендацию у Центра развития карьеры Правительства Москвы.</p>
+							</div>
+						</div>
+						<div class="dd-group__item">
+							<div class="dd-group__head dd-head-js">Что будет, если я пройду конкурсный отбор, выберу место и меня будут готовы принять на практику, но я не смогу выйти в обозначенные сроки?
+							</div>
+							<div class="dd-group__content dd-content-js">
+								<p>Мы понимаем, иногда планы неожиданно меняются или появляются непредвиденные обстоятельства. В этом случае тебе стоит обязательно предупредить куратора практики и руководителя практики от принимающей организации о случившемся.</p>Если ты не выйдешь на практику без предупреждения и без уважительной причины, то, по условиям нашей программы, мы больше не сможем приглашать тебя к участию в Молодежных карьерных проектах Правительства Москвы.
+							</div>
+						</div>
+					</div>
+					<div class="quest">
+						<div class="quest__title">Я не нашел ответа на мой вопрос. Что делать?
+						</div>
+						<div class="quest__descr">Напишите нам в сети <a href="https://vk.com/moscow_career" target="_blank">«ВКонтакте»</a>, <a href="https://t.me/moscow_career" target="_blank">«Телеграме»</a> или на почту <a href="mailto:career@edu.mos.ru" target="_blank">career@edu.mos.ru</a>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

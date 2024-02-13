@@ -54,9 +54,22 @@ class JSCCommon {
 		Inputmask({ "mask": "99.99.9999", showMaskOnHover: false }).mask(InputTel);
 	}
 
+  static makeDDGroup() {
+    $(".dd-head-js").on("click", function () {
+      let clickedHead = this;
+      $(this).parent().toggleClass("active");
+      $(this)
+        .next()
+        .slideToggle(function () {
+          $(this).toggleClass("active");
+        });
+    });
+  }
+
 	static init() {
 		this.modalCall(); 
 		this.inputMask();
 		this.dateMask();
+    this.makeDDGroup();
 	}
 };

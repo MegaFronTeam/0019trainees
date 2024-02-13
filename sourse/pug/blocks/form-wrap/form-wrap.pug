@@ -71,3 +71,8 @@ mixin add-file(n)
 
 mixin policy()
 	+e.policy Нажимая кнопку &laquo;Отправить заявку&raquo;, я&nbsp;<a href="#" >принимаю условия политики обработки персональных данных</a>.
+
+mixin policy2()
+	+e.policy
+		+in-c()(checked)
+			+e.text.text-secondary Я соглашаюсь на обработку моих <a href="https://talent.mos.ru/upload/agreement/agreement_10_08_2023.pdf">персональных данных</a>.

@@ -5,3 +5,7 @@
 5. <https://megafronteam.github.io/0019trainees/public/1.5.html>
 6. <https://megafronteam.github.io/0019trainees/public/00-modal.html>
 7. <https://megafronteam.github.io/0019trainees/public/mail.html>
+
+Правки от 13.02.2024
+
+1. <https://megafronteam.github.io/0019trainees/public/02-registration.html>
