@@ -40,11 +40,11 @@ mixin sForm2()
 				+e.title Заполни заявку<br>и пройди конкурсный отбор
 				+e.item
 					+input("Название вуза, в котором учишься*",'text')
-				+e.item
-					p Знаешь ли ты точные даты своей практики*?
-					+in-c("radio",'Да','period')(checked)
-					+in-c("radio",'Нет','period')
-				+e.item
+				+e.item.data-answ
+					p Знаешь ли ты точные даты практики*?
+					+in-c("radio",'Да','period')(data-answ= 'yes')(checked)
+					+in-c("radio",'Нет','period')(data-answ= 'no')
+				+e.item.date
 					p Даты прохождения практики:
 					+e.SMALL.text.text-secondary.small Подай заявку не позднее чем за месяц до начала практики
 				+e.item
@@ -56,9 +56,11 @@ mixin sForm2()
 					.invalid-feedback неверный формат даты
 				//- +in-c("checkbox", 'Гражданство РФ')
 
-				+e.item
-					+in-c("radio",'Гражданство РФ','gr')(checked)
-					+in-c("radio",'Гражданство другого государства','gr')
+				+e.item.gr
+					+in-c("radio",'Гражданство РФ','gr')(data-show= 'false')(checked)
+					+in-c("radio",'Гражданство другого государства','gr')(data-show= 'true')
+				+e.item.gr-other.gr-other-none
+					+input("Страна гражданства*",'text')
 				+e.btn.btn.btn-dark(type="submit").w-100 Отправить заявку
 				+policy2
 	// end sForm

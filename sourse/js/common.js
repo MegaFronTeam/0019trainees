@@ -21,11 +21,43 @@ function eventHandler() {
 	});
 
 };
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+/* select citizenship */
+const citizenship = document.querySelectorAll('.gr .custom-input')
+const grOther = document.querySelector('.gr-other')
+citizenship.forEach(el => {
+  el.addEventListener('change', (e)=> {
+    const dataEl = el.firstChild.attributes[3].value;
+    if (dataEl === 'false') {
+      grOther.classList.remove('gr-other-block')
+      grOther.classList.add('gr-other-none')
+    } else if (dataEl === 'true') {
+      grOther.classList.add('gr-other-block')
+      grOther.classList.remove('gr-other-none')
+    }
+  })
+})
+
+/* select datePractice: yes or no */
+const datePractice = document.querySelectorAll('.data-answ .custom-input')
+const dateQuest = document.querySelector('.form-wrap__item.date p')
+datePractice.forEach(el => {
+  el.addEventListener('change', (e)=> {
+    const dataEl = el.firstChild.attributes[3].value;
+    if (dataEl === 'yes') {
+      dateQuest.innerText = 'Даты прохождения практики:'
+    } else if (dataEl === 'no') {
+      dateQuest.innerText = 'Желаемый период прохождения практики:'
+    }
+  })
+})
+
 
 // window.onload = function () {
 // 	document.body.classList.add('loaded_hiding');

@@ -40,14 +40,14 @@
 								</div>
 								<!-- +e.input-wrap-->
 							</div>
-							<div class="form-wrap__item">
-								<p>Знаешь ли ты точные даты своей практики*?</p>
-								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Да</span>
+							<div class="form-wrap__item data-answ">
+								<p>Знаешь ли ты точные даты практики*?</p>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio" data-answ="yes" checked="checked"/><span class="custom-input__text form-check-label">Да</span>
 								</label>
-								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio"/><span class="custom-input__text form-check-label">Нет</span>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio" data-answ="no"/><span class="custom-input__text form-check-label">Нет</span>
 								</label>
 							</div>
-							<div class="form-wrap__item">
+							<div class="form-wrap__item date">
 								<p>Даты прохождения практики:</p><small class="form-wrap__text text-secondary small">Подай заявку не позднее чем за месяц до начала практики</small>
 							</div>
 							<div class="form-wrap__item">
@@ -73,16 +73,23 @@
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
-							<div class="form-wrap__item">
-								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Гражданство РФ</span>
+							<div class="form-wrap__item gr">
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio" data-show="false" checked="checked"/><span class="custom-input__text form-check-label">Гражданство РФ</span>
 								</label>
-								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio"/><span class="custom-input__text form-check-label">Гражданство другого государства</span>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio" data-show="true"/><span class="custom-input__text form-check-label">Гражданство другого государства</span>
 								</label>
+							</div>
+							<div class="form-wrap__item gr-other gr-other-none">
+								<div class="form-wrap__input-wrap form-group"> 
+									<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Страна гражданства*"/><span class="form-wrap__input-title">Страна гражданства*</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
 							</div>
 							<button class="form-wrap__btn btn btn-dark w-100" type="submit">Отправить заявку
 							</button>
 							<div class="form-wrap__policy">
-								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text text-secondary">Я соглашаюсь на обработку моих <a href="https://talent.mos.ru/upload/agreement/agreement_10_08_2023.pdf">персональных данных</a>.</span>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text text-secondary">Я соглашаюсь на обработку моих <a href="https://talent.mos.ru/upload/agreement/agreement_10_08_2023.pdf" target="_blank">персональных данных.</a></span>
 								</label>
 							</div>
 						</form>
@@ -129,7 +136,7 @@
 							</div>
 						</div>
 						<div class="dd-group__item">
-							<div class="dd-group__head dd-head-js">У меня нет опыта работы. Что я могу указать в резюме?
+							<div class="dd-group__head dd-head-js">У меня нет опыта работы. Что я могу указать в резюме?
 							</div>
 							<div class="dd-group__content dd-content-js">
 								<p>Уверены, даже если опыта работы нет, тебе есть что рассказать! Нам интересно узнать о твоих успехах в научном, волонтерском, спортивном или любом другом виде деятельности. Но важно через них отразить свои навыки и увлечения. Например, напиши, какие мероприятия ты помогал организовывать и какую роль в процессе играл. Или расскажи об участии в соревнованиях.</p>
