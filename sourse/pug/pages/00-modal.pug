@@ -19,5 +19,8 @@ block pagecontent
 					.col-auto.mb-2
 						a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
 				+btn("#modal", "Поздравляем!")
-				+btn("#modal-success", "Заявка отправлена!")
+				.section.pt-0
+					h3 РЕГИСТРАЦИЯ
+					.row.gy-3.mb-3
+						+btn("#modal-success", "Заявка отправлена!")
 	+modal
