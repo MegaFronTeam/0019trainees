@@ -8,4 +8,5 @@
 
 Правки от 13.02.2024
 
-1. <https://megafronteam.github.io/0019trainees/public/02-registration.html>
+1. <https://megafronteam.github.io/0019trainees/public/00-modal.html>
+2. <https://megafronteam.github.io/0019trainees/public/02-registration.html>
