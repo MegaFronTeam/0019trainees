@@ -20,6 +20,18 @@ function eventHandler() {
 		$(this).parents(".form-wrap__input-wrap").find(".form-wrap__input-title").addClass("active")
 	});
 
+  new Swiper(".mobile-swiper--js", {
+    // loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    autoHeight: true,
+    // breakpoints: {
+    //   768: {
+    //     slidesPerView: 2,
+    //   },
+    // },
+  });
+
 };
 
 if (document.readyState !== 'loading') {

@@ -34,3 +34,24 @@ mixin sReg()
 					a(href="https://t.me/moscow_career" target="_blank") «Телеграме» 
 					| или на почту 
 					a(href="mailto:career@edu.mos.ru" target="_blank").line career@edu.mos.ru
+
+mixin cardPractice(icon)
+	.swiper-slide
+		+b.card-practice
+			+e.content
+				+icon(`${icon}`)
+				if block
+					block
+
+mixin sRegSlider()
+	+b.sRegSlider.section#sRegSlider&attributes(attributes)
+		.swiper.mobile-swiper--js
+			.swiper-wrapper
+				+cardPractice('student')
+					+e.text #[span Ты студент вуза?] Получи опыт работы в команде столицы, попробуй свои силы в реальных городских проектах и при желании закрой практику в вузе.
+				+cardPractice('calendar')
+					+e.text Продолжительность практики #[span от двух недель до двух месяцев].
+				+cardPractice('case')
+					+e.text А еще на практике ты подготовишься к 
+						a(href="https://talent.mos.ru/internships/?utm_source=internal&utm_medium=registration_form&utm_content=practice" target="_blank").line стажировке
+						| , где получишь больше возможностей для само-реализации, официальное трудоустройство и зарплату.

@@ -12,6 +12,16 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(22 / var(--h) *1em );
 }
+.icon-calendar {
+	--h: 42;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(42 / var(--h) *1em );
+}
+.icon-case {
+	--h: 42;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(42 / var(--h) *1em );
+}
 .icon-check {
 	--h: 27;
 	font-size:calc( var(--h) / 10 * 1rem);
@@ -26,6 +36,21 @@
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
+}
+.icon-logo {
+	--h: 34;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(105 / var(--h) *1em );
+}
+.icon-logo-mobile {
+	--h: 22;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(237 / var(--h) *1em );
+}
+.icon-student {
+	--h: 42;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(42 / var(--h) *1em );
 }
 .icon-telegram {
 	--h: 16;

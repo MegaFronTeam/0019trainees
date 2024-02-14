@@ -19,6 +19,20 @@ mixin modal()
 				+item(`2`,`ВКонтакте`)
 				+item(`3`,`Телеграм`)
 
-	// #modal-call
-	
+	// #modal-success
+	div(id="modal-success"  style="display: none" )
+		+b.modal-win--success
+			+e.title Заявка отправлена!
+			+e.title-sub Мы свяжемся с тобой по указанному электронному адресу в течение двух недель и расскажем о дальнейших действиях.
+			p Узнай больше о&nbsp;карьере в&nbsp;Правительстве Москвы!
+			.row
+				mixin item(i, t, link)
+					+e.item(href=`${link}` target="_blank")
+						+e.qr-wrap
+							+e.item-title= t
+							+img(`img/qr-${i}.png`)
+						+e.icon
+							+img(`img/svg/icon-${i}.svg`)
+				+item(`tg`,`Телеграм`,`https://t.me/moscow_career`)
+				+item(`2`,`ВКонтакте`, `https://vk.com/moscow_career`)
 	// end modals

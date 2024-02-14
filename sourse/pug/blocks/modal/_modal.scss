@@ -100,6 +100,37 @@
 		color: $body-color;
 
 	}
+  &--success {
+    padding-top: rem(52);
+    .row {
+      gap: rem(30);
+      @include media-breakpoint-up(sm) {
+        gap: rem(44);
+      }
+    }
+    .modal-win__title {
+      margin-bottom: rem(20);
+      @include media-breakpoint-down(sm) {
+        font-size: rem(20);
+        margin-bottom: rem(12);
+      }
+    }
+    .modal-win__title-sub {
+      line-height: 120%;
+      margin-bottom: rem(28);
+      @include media-breakpoint-up(sm) {
+        line-height: 133%;
+        
+      }
+    }
+    p {
+      margin-bottom: rem(13);
+      line-height: 112%;
+      @include media-breakpoint-up(sm) {
+        margin-bottom: rem(9);
+      }
+    }
+  }
 }
 
 a {
@@ -264,9 +295,13 @@ a {
 }
 
 .fancybox__content>.f-button.is-close-btn{
-	top: 36px !important;
-	right: 20px !important;
+	top: 22px !important;
+  right: 22px !important;
 	opacity: 1;
 	color: $body-color;
 	background: none;
+  @include media-breakpoint-up(sm) {
+    top: 43px !important;
+	  right: 43px !important;
+  }
 }

@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
@@ -30,6 +31,7 @@
 					<h1>Страница для  демонстрации модальных окон</h1>
 					<div class="row">
 												<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="#modal" data-fancybox="modal">Поздравляем!</a></div>
+												<div class="col-auto mb-2"><a class="btn btn-primary" href="#" data-src="#modal-success" data-fancybox="modal">Заявка отправлена!</a></div>
 					</div>
 				</div>
 			</main>
@@ -69,12 +71,40 @@
 					</div>
 				</div>
 			</div>
-			<!-- #modal-call-->
+			<!-- #modal-success-->
+			<div id="modal-success" style="display: none">
+				<div class="modal-win modal-win--success">
+					<div class="modal-win__title">Заявка отправлена!
+					</div>
+					<div class="modal-win__title-sub">Мы свяжемся с тобой по указанному электронному адресу в течение двух недель и расскажем о дальнейших действиях.
+					</div>
+					<p>Узнай больше о&nbsp;карьере в&nbsp;Правительстве Москвы!</p>
+					<div class="row">
+							<a class="modal-win__item" href="https://t.me/moscow_career" target="_blank">
+								<div class="modal-win__qr-wrap">
+									<div class="modal-win__item-title">Телеграм
+									</div><img src="img/qr-tg.png" alt="" loading="lazy"/>
+								</div>
+								<div class="modal-win__icon"><img src="img/svg/icon-tg.svg" alt="" loading="lazy"/>
+								</div>
+							</a>
+							<a class="modal-win__item" href="https://vk.com/moscow_career" target="_blank">
+								<div class="modal-win__qr-wrap">
+									<div class="modal-win__item-title">ВКонтакте
+									</div><img src="img/qr-2.png" alt="" loading="lazy"/>
+								</div>
+								<div class="modal-win__icon"><img src="img/svg/icon-2.svg" alt="" loading="lazy"/>
+								</div>
+							</a>
+					</div>
+				</div>
+			</div>
 			<!-- end modals-->
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"></script>
 		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>

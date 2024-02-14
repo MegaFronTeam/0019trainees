@@ -21,15 +21,18 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+img("img/svg/tvoy_gorod_g.svg")
-			h1 Начни карьеру в&nbsp;Правительстве Москвы!
-			p Заполни все поля и отправь анкету.
+			.d-md-block
+				+icon("logo")
+			.d-sm-none
+				+icon("logo-mobile")
+			h1 Приходи на практику <br> в Правительство Москвы!
 	// end top-nav
 
-//- mixin top-nav2() 
+//- mixin top-nav() 
 //- 	// start top-nav
 //- 	+b.top-nav.block-with-lazy
 //- 		.container
 //- 			+img("img/svg/tvoy_gorod_g.svg")
-//- 			h1 Приходи на практику в Правительство Москвы!
+//- 			h1 Начни карьеру в&nbsp;Правительстве Москвы!
+//- 			p Заполни все поля и отправь анкету.
 //- 	// end top-nav

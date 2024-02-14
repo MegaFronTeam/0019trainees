@@ -154,3 +154,95 @@
   color: $body-color;
 }
 
+.sRegSlider {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: rem(16);
+  padding-right: rem(16);
+  --sPT: #{rem(0)};
+  --sPB: #{rem(60)};
+  max-width: calc(1048px  + rem(32));
+  // padding-right: 1rem;
+  .card-practice {
+    background: $white;
+    border-radius: rem(24);
+    padding: rem(30) rem(16);
+    // display: block;
+    height: 100%;
+    @include media-breakpoint-up(sm) {
+      background: transparent;
+      padding: rem(10) rem(32);
+    }
+    // max-width: 90%;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: rem(20);
+      height: 100%;
+      @include media-breakpoint-up(sm) {
+        flex-direction: row;
+        gap: rem(24);
+      }
+    }
+    &__text {
+      // margin-bottom: auto;
+      font-size: rem(20);
+      line-height: 133%;
+      @include media-breakpoint-up(sm) {
+        font-size: rem(24);
+        
+      }
+    }
+    span {
+      font-weight: 700;
+      color: $primary;
+    }
+    .icon {
+      font-size: rem(42);
+      color: $orange;
+      min-width: rem(42);
+    }
+    .line {
+      font-weight: 700;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: rem(1);
+        background: $primary;
+      }
+    }
+  }
+  .swiper {
+    overflow: visible;
+    max-width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    @include media-breakpoint-up(sm) {
+      width: 100%;
+      background: $white;
+      padding-top: rem(24);
+      padding-bottom: rem(24);
+      max-width: calc(1048px  + rem(32));
+      border-radius: rem(24);
+    }
+  }
+  .swiper-slide {
+    height: auto;
+    display: block;
+    
+  }
+  .swiper-wrapper {
+    overflow: visible;
+    height: 100% !important;
+    // min-height: 266px;
+    @include media-breakpoint-up(sm) {
+      flex-direction: column;
+      transform: none !important;
+    }
+  }
+}
+

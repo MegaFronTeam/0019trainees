@@ -13,10 +13,9 @@ block pagecontent
 	//- +mob-mnu()
 	
 	
-	//- +parts('header')
-	
+	+parts('header')
 	main
-		h1 Приходи на практику в Правительство Москвы!
+		+sRegSlider()
 		+sForm2()
 			div(class="form-wrap__input-wrap form-group")
 				select(class="form-wrap__input form-select сustom-select-js"  data-placeholder="Уровень образования*")
