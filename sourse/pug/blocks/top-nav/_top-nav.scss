@@ -5,27 +5,25 @@
 	.container{
 		position: relative;
 		margin-top: rem(68);
+    max-width: calc(1048px  + rem(32) + 205px);
+    @include media-breakpoint-up(xl) {
+      // max-width: calc(1048px  + rem(32));
+    }
     @include media-breakpoint-up(sm) {
       margin-top: rem(55);
     }
 		// @include media-breakpoint-up(sm) {
 		// 	text-align: center;
 		// }
-		max-width: calc(1600px - 94px * 2);
 		.icon-logo {
       font-size: rem(33);
-      margin-left: rem(60);
+      // margin-left: rem(60);
       margin-top: rem(10);
       margin-bottom: rem(-6);
     }
 		.icon-logo-mobile {
       max-width: 100%;
       font-size: rem(25);
-			// @include media-breakpoint-up(xl) {
-			// 	position: absolute;
-			// 	left: 15px;
-			// 	top: rem(10);
-			// }
 			margin-bottom: rem(16);
 		}
 
@@ -58,6 +56,9 @@
 
 	}
   .d-md-block {
+    max-width: calc(1600px - 94px * 2);
+    margin-left: 0;
+    margin-right: 0;
     @include media-breakpoint-down(sm) {
       display: none;
     }
