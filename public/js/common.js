@@ -78,3 +78,29 @@ datePractice.forEach(el => {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+
+/* date picker */
+moment.locale('ru');
+// localLocale.format('LLLL');
+$('input[name="daterange"]').daterangepicker({
+    // autoUpdateInput: false,
+    
+    // showDropdowns: true,
+    // minYear: 2024,
+    // maxYear: parseInt((+moment().format('YYYY') + 1),10),
+    opens: 'center',
+    locale: {
+      // cancelLabel: 'Clear', 
+        format: 'DD.MM.YYYY', // Формат даты
+        applyLabel: 'Выбрать', // Текст кнопки "Применить"
+        cancelLabel: 'Отмена', // Текст кнопки "Отмена"
+        daysOfWeek: [
+            'Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'
+        ],
+        monthNames: [
+            'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+        ],
+        firstDay: 1
+    },
+});

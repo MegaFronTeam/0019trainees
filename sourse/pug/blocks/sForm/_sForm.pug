@@ -42,10 +42,11 @@ mixin sForm2()
 					+input("Название вуза, в котором учишься*",'text')
 				+e.item.data-answ
 					p Знаешь ли ты точные даты практики*?
-					+in-c("radio",'Да','period')(data-answ= 'yes')(checked)
+					+in-c("radio",'Да','period')(data-answ= 'yes', checked)
 					+in-c("radio",'Нет','period')(data-answ= 'no')
 				+e.item.date
 					p Даты прохождения практики:
+					+input("Начало",'daterange')
 					+e.SMALL.text.text-secondary.small Подай заявку не позднее чем за месяц до начала практики
 				+e.item
 					+input("E-mail*",'email')
@@ -57,7 +58,7 @@ mixin sForm2()
 				//- +in-c("checkbox", 'Гражданство РФ')
 
 				+e.item.gr
-					+in-c("radio",'Гражданство РФ','gr')(data-show= 'false')(checked)
+					+in-c("radio",'Гражданство РФ','gr')(data-show= 'false', checked)
 					+in-c("radio",'Гражданство другого государства','gr')(data-show= 'true')
 				+e.item.gr-other.gr-other-none
 					+input("Страна гражданства*",'text')
