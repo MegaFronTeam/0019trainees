@@ -84,10 +84,10 @@ moment.locale('ru');
 // localLocale.format('LLLL');
 $('input[name="daterange"]').daterangepicker({
     // autoUpdateInput: false,
-    "parentEl": ".date.form-group",
-    // showDropdowns: true,
-    // minYear: 2024,
-    // maxYear: parseInt((+moment().format('YYYY') + 1),10),
+    // "parentEl": ".date.form-group",
+    showDropdowns: true,
+    minYear: parseInt((+moment().format('YYYY') - 1),10),
+    maxYear: parseInt((+moment().format('YYYY') + 4),10),
     opens: 'center',
     locale: {
       // cancelLabel: 'Clear', 

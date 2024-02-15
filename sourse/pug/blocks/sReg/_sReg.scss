@@ -3,7 +3,7 @@
     --sPT: #{rem(00)};
     --sPB: #{rem(80)};
     @include media-breakpoint-up(sm) {
-      --sPT: #{rem(30)};
+      --sPT: #{rem(24)};
       --sPB: #{rem(60)};
     }
     position: relative;
@@ -256,8 +256,8 @@
     @include media-breakpoint-up(sm) {
       width: 100%;
       background: $white;
-      padding-top: rem(24);
-      padding-bottom: rem(24);
+      padding-top: rem(20);
+      padding-bottom: rem(20);
       max-width: calc(1048px  + rem(32));
       border-radius: rem(24);
     }

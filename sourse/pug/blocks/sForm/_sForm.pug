@@ -46,7 +46,8 @@ mixin sForm2()
 					+in-c("radio",'Нет','period')(data-answ= 'no')
 				+e.item.date
 					p Даты прохождения практики:
-					+input("Начало",'daterange')
+					+input("Начало - окончание",'daterange')
+						+icon("calendar")
 					+e.SMALL.text.text-secondary.small Подай заявку не позднее чем за месяц до начала практики
 				+e.item
 					+input("E-mail*",'email')

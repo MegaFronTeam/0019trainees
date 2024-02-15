@@ -55,6 +55,9 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
+  a {
+    color: $dark;
+  }
   .d-md-block {
     max-width: calc(1600px - 94px * 2);
     margin-left: 0;
