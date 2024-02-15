@@ -567,6 +567,12 @@ input::-webkit-inner-spin-button {
       height: 20px;
       padding: 5px 0 !important;
       background: $gray-200;
+      &:hover {
+        background: $body-color !important;
+      }
+    }
+    option[selected] {
+      color: $orange;
     }
   }
   thead tr:nth-child(2) th {
@@ -668,7 +674,4 @@ input::-webkit-inner-spin-button {
 }
 .daterangepicker select.monthselect {
   text-align: end !important;
-}
-select:focus {
-  outline: none;
 }
