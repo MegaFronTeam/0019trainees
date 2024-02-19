@@ -32,6 +32,30 @@ function eventHandler() {
     // },
   });
 
+
+  const datePicker = document.querySelector('.daterangepicker')
+  const daterangepickerTitle = document.createElement('div')
+  daterangepickerTitle.classList.add('daterangepicker__title')
+  datePicker.insertAdjacentElement('afterbegin', daterangepickerTitle)
+  daterangepickerTitle.innerText = 'Дата начала практики'
+
+  const inputDate = document.querySelector('.date')
+  // inputDate.addEventListener('click', changeTitle)
+  // function changeTitle() {
+  //   document.querySelectorAll('td .available').forEach((el) => {
+  //     el.addEventListener('click', ()=> {
+  //       daterangepickerTitle.innerText = 'Дата окончания практики'
+  //     })
+  //   })
+  // }
+
+  $('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
+    $('td.available').on('click', function() {
+      console.log("hi");
+      daterangepickerTitle.text('Дата окончания практики');
+    });
+  });
+
 };
 
 if (document.readyState !== 'loading') {
@@ -82,25 +106,44 @@ datePractice.forEach(el => {
 /* date picker */
 moment.locale('ru');
 // localLocale.format('LLLL');
+
 $('input[name="daterange"]').daterangepicker({
-    // autoUpdateInput: false,
-    // "parentEl": ".date.form-group",
+    autoUpdateInput: false,
+    "parentEl": ".date.form-group",
     showDropdowns: true,
     minYear: parseInt((+moment().format('YYYY') - 1),10),
-    maxYear: parseInt((+moment().format('YYYY') + 4),10),
-    opens: 'center',
+    maxYear: parseInt((+moment().format('YYYY') + 1),10),
+    opens: 'right',
     locale: {
-      // cancelLabel: 'Clear', 
-        format: 'DD.MM.YYYY', // Формат даты
-        applyLabel: 'Выбрать', // Текст кнопки "Применить"
-        cancelLabel: 'Отмена', // Текст кнопки "Отмена"
-        daysOfWeek: [
-            'Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'
-        ],
-        monthNames: [
-            'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
-        ],
-        firstDay: 1
+      cancelLabel: 'Clear',
+      format: 'DD.MM.YYYY', // Формат даты
+      applyLabel: 'Выбрать', // Текст кнопки "Применить"
+      cancelLabel: 'Отмена', // Текст кнопки "Отмена"
+      daysOfWeek: [
+        'Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'
+      ],
+      monthNames: [
+        'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+        'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+      ],
+      firstDay: 1
     },
+    maxSpan: {
+      days: 31
+    }
 });
+$('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
+  $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+});
+
+$('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
+  $(this).val('');
+});
+// $('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
+//   document.querySelectorAll('th .available').forEach((el) => {
+//     el.on('click', ()=> {
+//       console.log(document.querySelectorAll('th .available'));
+//       daterangepickerTitle.innerText = 'Дата окончания практики'
+//     })
+//   })
+// });

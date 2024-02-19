@@ -84,7 +84,7 @@
 							</div>
 							<div class="form-wrap__item data-answ">
 								<p>Знаешь ли ты точные даты практики*?</p>
-								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio" data-answ="yes" checked="checked"/><span class="custom-input__text form-check-label">Да</span>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio" data-answ="yes"/><span class="custom-input__text form-check-label">Да</span>
 								</label>
 								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="period" type="radio" data-answ="no"/><span class="custom-input__text form-check-label">Нет</span>
 								</label>
@@ -102,7 +102,8 @@
 							</div>
 							<div class="form-wrap__item">
 								<div class="form-wrap__input-wrap form-group"> 
-									<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail*"/><span class="form-wrap__input-title">E-mail*</span>
+									<label><input class="form-wrap__input form-control is-invalid" name="email" type="email" placeholder="E-mail*"/><span class="form-wrap__input-title">E-mail*</span>
+										<div class="invalid-feedback">неверный формат адреса почты</div>
 									</label>
 								</div>
 								<!-- +e.input-wrap--><small class="form-wrap__text text-secondary small">Пожалуйста, не используй Gmail, чтобы точно получать наши письма</small>
@@ -118,13 +119,12 @@
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__input-wrap form-group"> 
-								<label><input class="form-wrap__input form-control is-invalid date-mask-js" name="text" type="text" placeholder="Дата рождения*"/><span class="form-wrap__input-title">Дата рождения*</span>
-									<div class="invalid-feedback">неверный формат адреса почты</div>
+								<label><input class="form-wrap__input form-control date-mask-js" name="text" type="text" placeholder="Дата рождения*"/><span class="form-wrap__input-title">Дата рождения*</span>
 								</label>
 							</div>
 							<!-- +e.input-wrap-->
 							<div class="form-wrap__item gr">
-								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio" data-show="false" checked="checked"/><span class="custom-input__text form-check-label">Гражданство РФ</span>
+								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio" data-show="false"/><span class="custom-input__text form-check-label">Гражданство РФ</span>
 								</label>
 								<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="gr" type="radio" data-show="true"/><span class="custom-input__text form-check-label">Гражданство другого государства</span>
 								</label>

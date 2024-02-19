@@ -24,6 +24,9 @@
 			// 		color: rgba(#05141F, .5);
 			opacity: 0 !important	;
 		}
+    // #placeholder {
+    //   color: $secondary;
+    // }
 	}
 	label {
 		width: 100%;
@@ -40,7 +43,7 @@
 		left: #{$input-padding-x};
 		top: var(--sp-y);
 		font-size: var(--fz);
-		color: #a3a3a3;
+		color: $secondary;
 		transform-origin: left;
 		pointer-events: none;
 		font-weight: $input-font-weight;
@@ -67,6 +70,7 @@
 			}
 		}
 	}
+
   .data-answ {
     margin-bottom: rem(34);
     @include media-breakpoint-up(sm) {
@@ -112,6 +116,33 @@
 			}
 		}
 	}
+}
+.date .form-wrap__input-title {
+  padding-left: 26px;
+  top: auto;
+  bottom: 3px;
+}
+.date {
+  .form-wrap__input {
+  &:-webkit-autofill,
+		&:focus,
+		&:not(:placeholder-shown) {
+			&:not(textarea) {
+				// box-shadow:  0px 3px 0px  var(--bs-primary);
+			}
+		}
+		&:-webkit-autofill,
+		&:focus,
+		&.form-control:not(:placeholder-shown),
+		&.select2-container--below {
+			& ~ .form-wrap__input-title {
+        opacity: 0;
+        display: none;
+				//  color: #846951;
+				// transform: scale(0.8) translateY(var(--up-t, -100%));
+			}
+		}
+  }
 }
 
 .parsley-error {
@@ -403,6 +434,7 @@ input::-webkit-inner-spin-button {
     }
     .date {
       margin-bottom: rem(8);
+      position: relative;
     }
     .date .form-group {
       margin-bottom: 0;
@@ -415,7 +447,7 @@ input::-webkit-inner-spin-button {
       .icon-calendar {
         position: absolute;
         left: 0;
-        bottom: rem(3);
+        bottom: rem(5);
         font-size: rem(22);
       }
     }
@@ -427,7 +459,8 @@ input::-webkit-inner-spin-button {
     }
     .small {
       line-height: 100% !important;
-      // --bs-body-line-height: #{rem(14)};
+      // line-height: var(--bs-body-line-height);
+      // --bs-body-line-height: #{rem(12)} !important;
     }
     &__btn {
       margin-top: rem(20);
@@ -452,6 +485,9 @@ input::-webkit-inner-spin-button {
   .mb-40 {
     margin-bottom: rem(0) !important;
   }
+  .gr {
+    margin-top: rem(40);
+  }
   .gr-other {
     margin-top: rem(25);
   }
@@ -464,12 +500,34 @@ input::-webkit-inner-spin-button {
 }
 
 /* daterange */
+.opensright::before,
+.opensright::after {
+  display: none;
+  opacity: 0;
+}
 
 .daterangepicker {
-  border-radius: rem(24);
+
+  border-radius: rem(20);
+  @include media-breakpoint-up(md) {
+    border-radius: rem(32);
+  }
   width: auto;
-  width: rem(370);
+  width: 375px;
   max-width: 100%;
+  &__title {
+    padding: rem(24);
+    padding-bottom: rem(14);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 133%;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      padding-bottom: 0;
+      margin-bottom: rem(-12);
+      padding-top: rem(38);
+    }
+  }
   @include media-breakpoint-up(md) {
     width: rem(440);
   }
@@ -491,18 +549,24 @@ input::-webkit-inner-spin-button {
   .month {
     // font-weight: 500 !important;
     font-size: rem(20) !important;
+    margin-bottom: -5px;
   }
   .drp-calendar {
     max-width: 100%;
+    padding-bottom: 24px !important;
   }
   .left {
     @include media-breakpoint-up(md) {
-      padding-left: rem(32) !important;
+      padding-left: rem(30) !important;
     }
   }
   .right {
+    // .month {
+    //   margin-left: rem(-30) !important;
+    //   margin-right: 10px;
+    // }
     @include media-breakpoint-up(md) {
-      padding-right: rem(32) !important;
+      padding-right: rem(30) !important;
     }
   }
   .left .calendar-table {
@@ -575,6 +639,9 @@ input::-webkit-inner-spin-button {
       color: $orange;
     }
   }
+  thead tr:first-child {
+    margin-bottom: -10px;
+  }
   thead tr:nth-child(2) th {
     border-bottom: 1px solid $gray-200;
     // font-weight: medium;
@@ -608,18 +675,13 @@ input::-webkit-inner-spin-button {
   td,
   th:not(.month):not(.available) {
     font-size: rem(18) !important;
-    min-width: rem(46) !important;
-    width: rem(46) !important;
+    min-width: rem(49) !important;
+    width: rem(49) !important;
     height: rem(48) !important;
     @include media-breakpoint-up(sm) {
-      min-width: rem(50) !important;
-      width: rem(50) !important;
-      height: rem(50) !important;
-    }
-    @include media-breakpoint-up(md) {
-      min-width: rem(56) !important;
-      width: rem(56) !important;
-      height: rem(52) !important;
+      min-width: rem(49) !important;
+      width: rem(49) !important;
+      height: rem(48) !important;
     }
   }
   td.start-date {
