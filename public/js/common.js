@@ -32,7 +32,6 @@ function eventHandler() {
     // },
   });
 
-
   const datePicker = document.querySelector('.daterangepicker')
   const daterangepickerTitle = document.createElement('div')
   daterangepickerTitle.classList.add('daterangepicker__title')
@@ -51,7 +50,6 @@ function eventHandler() {
 
   $('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
     $('td.available').on('click', function() {
-      console.log("hi");
       daterangepickerTitle.text('Дата окончания практики');
     });
   });
@@ -114,6 +112,7 @@ $('input[name="daterange"]').daterangepicker({
     minYear: parseInt((+moment().format('YYYY') - 1),10),
     maxYear: parseInt((+moment().format('YYYY') + 1),10),
     opens: 'right',
+    // "startDate": "02/13/2024",
     locale: {
       cancelLabel: 'Clear',
       format: 'DD.MM.YYYY', // Формат даты
@@ -133,17 +132,23 @@ $('input[name="daterange"]').daterangepicker({
     }
 });
 $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {
-  $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+  $(this).val(picker.startDate.format('DD.MM.YYYY') + ' - ' + picker.endDate.format('DD.MM.YYYY'));
+});
+$('input[name="daterange"]').on('hide.daterangepicker', function(ev, picker) {
+  $(this).val(picker.startDate.format('DD.MM.YYYY') + ' - ' + picker.endDate.format('DD.MM.YYYY'));
 });
 
 $('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
   $(this).val('');
 });
-// $('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
-//   document.querySelectorAll('th .available').forEach((el) => {
-//     el.on('click', ()=> {
-//       console.log(document.querySelectorAll('th .available'));
-//       daterangepickerTitle.innerText = 'Дата окончания практики'
-//     })
-//   })
-// });
+
+$('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
+  document.querySelectorAll('th .available').forEach((el) => {
+    el.on('click', ()=> {
+      daterangepickerTitle.innerText = 'Дата окончания практики'
+    })
+  })
+});
+
+// $('input[name="daterange"]').data('daterangepicker').setStartDate('18.02.2024')
+// $('input[name="daterange"]').data('daterangepicker').setEndDate('18.02.2024')

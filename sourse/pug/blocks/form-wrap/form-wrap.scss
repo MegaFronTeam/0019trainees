@@ -512,7 +512,7 @@ input::-webkit-inner-spin-button {
   @include media-breakpoint-up(md) {
     border-radius: rem(32);
   }
-  width: auto;
+  // width: auto;
   width: 375px;
   max-width: 100%;
   &__title {
