@@ -32,13 +32,13 @@ function eventHandler() {
     // },
   });
 
-  const datePicker = document.querySelector('.daterangepicker')
-  const daterangepickerTitle = document.createElement('div')
-  daterangepickerTitle.classList.add('daterangepicker__title')
-  datePicker.insertAdjacentElement('afterbegin', daterangepickerTitle)
-  daterangepickerTitle.innerText = 'Дата начала практики'
+  // const datePicker = document.querySelector('.daterangepicker')
+  // const daterangepickerTitle = document.createElement('div')
+  // daterangepickerTitle.classList.add('daterangepicker__title')
+  // datePicker.insertAdjacentElement('afterbegin', daterangepickerTitle)
+  // daterangepickerTitle.innerText = 'Дата начала практики'
 
-  const inputDate = document.querySelector('.date')
+  // const inputDate = document.querySelector('.date')
   // inputDate.addEventListener('click', changeTitle)
   // function changeTitle() {
   //   document.querySelectorAll('td .available').forEach((el) => {
@@ -48,11 +48,11 @@ function eventHandler() {
   //   })
   // }
 
-  $('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
-    $('td.available').on('click', function() {
-      daterangepickerTitle.text('Дата окончания практики');
-    });
-  });
+  // $('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
+  //   $('td.available').on('click', function() {
+  //     daterangepickerTitle.text('Дата окончания практики');
+  //   });
+  // });
 
 };
 
@@ -82,6 +82,10 @@ citizenship.forEach(el => {
 const datePractice = document.querySelectorAll('.data-answ .custom-input')
 const dateQuest = document.querySelector('.form-wrap__item.date p')
 datePractice.forEach(el => {
+  el.addEventListener('click', ()=> {
+    document.querySelector('.date').classList.remove('date-hide')
+    document.querySelector('.date').classList.add('date-block')
+  })
   el.addEventListener('change', (e)=> {
     const dataEl = el.firstChild.attributes[3].value;
     if (dataEl === 'yes') {
@@ -142,13 +146,13 @@ $('input[name="daterange"]').on('cancel.daterangepicker', function(ev, picker) {
   $(this).val('');
 });
 
-$('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
-  document.querySelectorAll('th .available').forEach((el) => {
-    el.on('click', ()=> {
-      daterangepickerTitle.innerText = 'Дата окончания практики'
-    })
-  })
-});
+// $('input[name="daterange"]').on('showCalendar.daterangepicker', function(ev, picker) {
+//   document.querySelectorAll('th .available').forEach((el) => {
+//     el.on('click', ()=> {
+//       daterangepickerTitle.innerText = 'Дата окончания практики'
+//     })
+//   })
+// });
 
 // $('input[name="daterange"]').data('daterangepicker').setStartDate('18.02.2024')
 // $('input[name="daterange"]').data('daterangepicker').setEndDate('18.02.2024')

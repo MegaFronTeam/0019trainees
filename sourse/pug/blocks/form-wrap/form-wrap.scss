@@ -42,7 +42,7 @@
 		// padding-left: $input-padding-x;
 		left: #{$input-padding-x};
 		top: var(--sp-y);
-		font-size: var(--fz);
+		font-size: 18px;
 		color: $secondary;
 		transform-origin: left;
 		pointer-events: none;
@@ -433,8 +433,17 @@ input::-webkit-inner-spin-button {
       }
     }
     .date {
-      margin-bottom: rem(8);
+      margin-bottom: rem(16);
+      @include media-breakpoint-up(sm) {
+        margin-bottom: rem(0);
+      }
       position: relative;
+    }
+    .date-hide {
+      display: none;
+    }
+    .date-block {
+      display: block;
     }
     .date .form-group {
       margin-bottom: 0;
@@ -458,7 +467,14 @@ input::-webkit-inner-spin-button {
       }
     }
     .small {
-      line-height: 100% !important;
+      display: block;
+      line-height: 100%;
+      padding-top: 5px;
+      max-width: rem(280);
+      font-size: 14px;
+      @include media-breakpoint-up(sm) {
+        max-width: none;
+      }
       // line-height: var(--bs-body-line-height);
       // --bs-body-line-height: #{rem(12)} !important;
     }
@@ -513,7 +529,7 @@ input::-webkit-inner-spin-button {
     border-radius: rem(32);
   }
   // width: auto;
-  width: 375px;
+  width: 370px;
   max-width: 100%;
   &__title {
     padding: rem(24);
@@ -529,7 +545,7 @@ input::-webkit-inner-spin-button {
     }
   }
   @include media-breakpoint-up(md) {
-    width: rem(440);
+    width: rem(415);
   }
   @include media-breakpoint-up(lg) {
     width: auto;
@@ -594,11 +610,14 @@ input::-webkit-inner-spin-button {
     -moz-appearance: none;
     appearance: none;
     background: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='28' height='40' viewBox='0 0 28 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 28.5L7.0718 16.5L20.9282 16.5L14 28.5Z' fill='%23663398'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    vertical-align: middle;
+    @include media-breakpoint-up(sm) {
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='40' viewBox='0 0 28 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 28.5L7.0718 16.5L20.9282 16.5L14 28.5Z' fill='%23663398'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+      vertical-align: middle;
+    }
+    
     &:focus {
       outline: none;
     }
@@ -628,8 +647,8 @@ input::-webkit-inner-spin-button {
     }
     option {
       text-align: center !important;
-      height: 20px;
-      padding: 5px 0 !important;
+      // height: 20px;
+      // padding: 5px 0 !important;
       background: $gray-200;
       &:hover {
         background: $body-color !important;
