@@ -435,7 +435,7 @@ input::-webkit-inner-spin-button {
     .date {
       margin-bottom: rem(16);
       @include media-breakpoint-up(sm) {
-        margin-bottom: rem(0);
+        margin-bottom: rem(20);
       }
       position: relative;
     }
