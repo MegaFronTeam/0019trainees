@@ -594,6 +594,12 @@ input::-webkit-inner-spin-button {
   }
   /* head */
   // , select:focus-visible
+  .monthselect option {
+    text-align: end;
+    @include media-breakpoint-up(md) {
+      text-align: center !important;
+    }
+  }
   select {
     border: none;
     border-radius: none;
@@ -601,7 +607,7 @@ input::-webkit-inner-spin-button {
     position: relative;
     color: $body-color;
     font-weight: 600;
-    width: auto !important;
+    width: 50% !important;
     // -webkit-user-select: none;
     // -moz-user-select: -moz-none;
     // -ms-user-select: none;
@@ -621,27 +627,7 @@ input::-webkit-inner-spin-button {
     &:focus {
       outline: none;
     }
-    // &:before {
-    //   @include mt;
-    //   content: '';
-    //   // display: inline-block;
-    //   width: rem(24);
-    //   min-width: rem(24);
-    //   height: rem(24);
-    //   z-index: 5;
-    //   background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 12L0.0717956 -3.51391e-07L13.9282 8.59975e-07L7 12Z' fill='%23663398' /%3E%3C/svg%3E");
-    //   background-repeat: no-repeat;
-    //   background-position: right;
-    //   background-size: contain;
-    //   // margin-left: rem(4);
-    //   vertical-align: middle;
-    // }
-    .yearselect {
-      // width: rem(50) !important;
-      // max-width: rem(50) !important;
-      text-align: center;
-    }
-    
+
     .monthselect div {
       text-align: end !important;
       @include media-breakpoint-up(md) {
@@ -649,10 +635,10 @@ input::-webkit-inner-spin-button {
       }
     }
     option {
-      text-align: end;
-      @include media-breakpoint-up(md) {
-        text-align: center !important;
-      }
+      // text-align: end;
+      // @include media-breakpoint-up(md) {
+      //   text-align: center !important;
+      // }
       // height: 20px;
       // padding: 5px 0 !important;
       background: $gray-200;
@@ -664,6 +650,14 @@ input::-webkit-inner-spin-button {
       color: $orange;
     }
   }
+  // .yearselect div {
+  //   // width: rem(50) !important;
+  //   // max-width: rem(50) !important;
+  //   // text-align: center;
+  //   option {
+  //     text-align: start !important;
+  //   }
+  // }
   thead tr:first-child {
     margin-bottom: -10px;
   }
@@ -767,4 +761,7 @@ input::-webkit-inner-spin-button {
 
 .daterangepicker td.start-date.end-date {
   border-radius: 50% !important;
+}
+.daterangepicker select.yearselect {
+  text-align: start !important;
 }
