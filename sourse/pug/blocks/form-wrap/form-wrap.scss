@@ -594,9 +594,6 @@ input::-webkit-inner-spin-button {
   }
   /* head */
   // , select:focus-visible
-  .monthselect {
-      margin: 0 !important;
-    }
   select {
     border: none;
     border-radius: none;
@@ -652,7 +649,10 @@ input::-webkit-inner-spin-button {
       }
     }
     option {
-      text-align: center !important;
+      text-align: end;
+      @include media-breakpoint-up(md) {
+        text-align: center !important;
+      }
       // height: 20px;
       // padding: 5px 0 !important;
       background: $gray-200;
@@ -693,7 +693,7 @@ input::-webkit-inner-spin-button {
   .next span {
     transform: rotate(180deg) !important;
   }
-    .weekend, .off .weekend {
+  .weekend, .off .weekend {
     color: $orange !important;
   }
   /* body */
